@@ -296,7 +296,7 @@ h2 {
 
 .order-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -394,9 +394,28 @@ footer {
     background-color: #5c4033;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px 30px;
 }
 
+footer h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.footer-contact {
+    margin: 20px 0;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
 
 /* Responsive tablet */
 
