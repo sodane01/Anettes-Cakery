@@ -3,21 +3,45 @@ function OrderOnline() {
     <section id="order-online">
       <h2>Order Online</h2>
 
+      <p className="section-intro">
+        Choose the sweetest way to get your treats.
+      </p>
+
       <div className="order-grid">
-        <article className="product-card">
-          <div className="product-emoji">🛍️</div>
+        <article className="order-card">
+          <div className="order-icon">🧁</div>
 
           <h3>Pickup</h3>
 
-          <p>Order online and collect your treats in store.</p>
+          <p>
+            Order ahead and collect your freshly baked treats in store.
+          </p>
+
+          <span className="order-note">Ready when you arrive</span>
         </article>
 
-        <article className="product-card">
-          <div className="product-emoji">🚚</div>
+        <article className="order-card">
+          <div className="order-icon">🚚</div>
 
-          <h3>Delivery</h3>
+          <h3>Local Delivery</h3>
 
-          <p>Get your favorite baked goods delivered to your door.</p>
+          <p>
+            Sweet treats delivered carefully to your door.
+          </p>
+
+          <span className="order-note">Perfect for cozy days</span>
+        </article>
+
+        <article className="order-card">
+          <div className="order-icon">🎉</div>
+
+          <h3>Events</h3>
+
+          <p>
+            Cupcakes, cakes and dessert tables for celebrations.
+          </p>
+
+          <span className="order-note">Birthdays, weddings & more</span>
         </article>
       </div>
     </section>
