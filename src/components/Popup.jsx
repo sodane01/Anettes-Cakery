@@ -1,6 +1,6 @@
 function Popup({ closePopup }) {
   return (
-    <div id="order-popup" className="popup">
+    <div className="popup">
       <div className="popup-content">
         <h2>Thank you for your order!</h2>
 

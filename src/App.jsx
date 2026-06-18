@@ -1,3 +1,5 @@
+
+import "./App.css";
 import { useState } from "react";
 
 import Header from "./components/Header";
@@ -10,7 +12,6 @@ import OrderOnline from "./components/OrderOnline";
 import ContactForm from "./components/ContactForm";
 import Popup from "./components/Popup";
 import Footer from "./components/Footer";
-
 import { products, customCakes } from "./data/products";
 
 function App() {

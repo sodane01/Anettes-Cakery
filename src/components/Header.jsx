@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <h1>Cakery</h1>
+      <h1>theCakery</h1>
 
       <nav>
         <a href="#about">About</a>
