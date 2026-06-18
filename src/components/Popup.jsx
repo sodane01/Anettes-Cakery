@@ -1,10 +1,10 @@
-function Popup({ closePopup }) {
+function Popup({ message, closePopup }) {
   return (
     <div className="popup">
       <div className="popup-content">
-        <h2>Thank you for your order!</h2>
+        <h2>theCakery</h2>
 
-        <p>Your sweet treats are being prepared.</p>
+        <p>{message}</p>
 
         <button className="order-btn" onClick={closePopup}>
           Close

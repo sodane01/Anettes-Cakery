@@ -30,6 +30,38 @@ export const products = [
   },
 
   {
+    name: "Strawberry Cupcake",
+    category: "cupcakes",
+    image: "/images/cupcakes/strawberry-cupcake.jpg",
+    price: "$5.00",
+    description: "Light vanilla cupcake topped with fresh strawberry buttercream."
+  },
+
+  {
+    name: "Cookies & Cream Cupcake",
+    category: "cupcakes",
+    image: "/images/cupcakes/cookies-cream-cupcake.jpg",
+    price: "$5.25",
+    description: "Chocolate cupcake topped with creamy cookies and cream frosting."
+  },
+
+  {
+    name: "Funfetti Cupcake",
+    category: "cupcakes",
+    image: "/images/cupcakes/funfetti-cupcake.jpg",
+    price: "$5.00",
+    description: "Colorful vanilla cupcake filled with rainbow sprinkles."
+  },
+
+  {
+    name: "Blueberry Cupcake",
+    category: "cupcakes",
+    image: "/images/cupcakes/blueberry-cupcake.jpg",
+    price: "$5.25",
+    description: "Soft vanilla cupcake topped with blueberry frosting."
+  },
+
+  {
     name: "Chocolate Chip Cookie",
     category: "cookies",
     image: "/images/cookies/chocolate-chip-cookie.jpg",
@@ -133,6 +165,69 @@ export const customCakes = [
     price: "$55.00",
     description: "Perfect for anniversaries, graduations and special events.",
   },
+
+  {
+    name: "Grand Celebration Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/grand-celebration.jpg",
+    price: "$275.00",
+    description: "A stunning multi-tier centerpiece for unforgettable celebrations."
+  },
+
+  {
+    name: "Vintage Lace Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/vintage-lace.jpg",
+    price: "$200.00",
+    description: "Inspired by vintage lace patterns and timeless elegance."
+  },
+
+  {
+    name: "Luxury Gold Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/luxury-gold.jpg",
+    price: "$240.00",
+    description: "White buttercream cake accented with edible gold details."
+  },
+
+  {
+    name: "Blush Romance Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/blush-romance.jpg",
+    price: "$190.00",
+    description: "Soft blush tones and delicate floral decorations."
+  },
+
+  {
+    name: "Modern Pearl Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/modern-pearl.jpg",
+    price: "$210.00",
+    description: "Contemporary design featuring elegant pearl details."
+  },
+  {
+    name: "Rose Elegance Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/rose-elegance.jpg",
+    price: "$195.00",
+    description: "Romantic wedding cake finished with handcrafted sugar roses."
+  },
+  {
+    name: "Rustic Garden Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/rustic-garden.jpg",
+    price: "$165.00",
+    description: "Semi-naked wedding cake with seasonal flowers and greenery."
+  },
+
+  {
+    name: "Classic Floral Wedding Cake",
+    category: "wedding-cakes",
+    image: "/images/wedding-cakes/classic-floral.jpg",
+    price: "$180.00",
+    description: "Elegant white wedding cake decorated with fresh flowers."
+  },
+
   {
     name: "Chocolate Layer Cake",
     image: "/images/custom-cakes/chocolate-layer-cake.jpg",

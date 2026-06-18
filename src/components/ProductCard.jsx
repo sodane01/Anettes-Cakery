@@ -1,4 +1,4 @@
-function ProductCard({ product, addToOrder }) {
+function ProductCard({ product, addToOrder, setSelectedImage }) {
   return (
     <article className="product-card">
       {product.image ? (
@@ -6,9 +6,18 @@ function ProductCard({ product, addToOrder }) {
           src={product.image}
           alt={product.name}
           className="product-image"
+          onClick={() => {
+            console.log("Clicked:", product.image);
+
+            if (setSelectedImage) {
+              setSelectedImage(product.image);
+            }
+          }}
         />
       ) : (
-        <div className="product-emoji">{product.emoji}</div>
+        <div className="product-emoji">
+          {product.emoji}
+        </div>
       )}
 
       <h3>{product.name}</h3>

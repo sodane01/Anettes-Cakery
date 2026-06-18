@@ -11,6 +11,15 @@ function Footer() {
         <p> hello@cakery.com</p>
       </div>
 
+      <div className="footer-socials">
+        <a href="https://facebook.com/cakery" target="_blank">
+           Facebook
+        </a>
+
+        <a href="https://instagram.com/cakery" target="_blank">
+           Instagram
+        </a>
+      </div>
       <p className="copyright">
         © 2026 Cakery. All rights reserved.
       </p>

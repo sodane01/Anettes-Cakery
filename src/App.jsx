@@ -1,7 +1,7 @@
-
 import "./App.css";
 import { useState } from "react";
 
+import SubscribeForm from "./components/SubscribeForm";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -12,12 +12,14 @@ import OrderOnline from "./components/OrderOnline";
 import ContactForm from "./components/ContactForm";
 import Popup from "./components/Popup";
 import Footer from "./components/Footer";
+
 import { products, customCakes } from "./data/products";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [cart, setCart] = useState([]);
-  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const filteredProducts =
     selectedCategory === "all"
@@ -34,16 +36,22 @@ function App() {
 
   function placeOrder() {
     if (cart.length === 0) {
-      alert("Your order is empty.");
+      setPopupMessage("Your cart is empty.");
       return;
     }
 
     setCart([]);
-    setShowPopup(true);
+    setPopupMessage(
+      "Thank you for your order! Your sweet treats are being prepared."
+    );
   }
 
   function closePopup() {
-    setShowPopup(false);
+    setPopupMessage("");
+  }
+
+  function closeImageModal() {
+    setSelectedImage(null);
   }
 
   return (
@@ -91,16 +99,35 @@ function App() {
           </div>
         </section>
 
-        <CustomCakeGrid cakes={customCakes} addToOrder={addToOrder} />
+        <CustomCakeGrid
+          cakes={customCakes}
+          addToOrder={addToOrder}
+          setSelectedImage={setSelectedImage}
+        />
 
         <OrderOnline />
 
         <ContactForm />
       </main>
 
+      <SubscribeForm setPopupMessage={setPopupMessage} />
+
       <Footer />
 
-      {showPopup && <Popup closePopup={closePopup} />}
+      {popupMessage && (
+        <Popup
+          message={popupMessage}
+          closePopup={closePopup}
+        />
+      )}
+
+      {selectedImage && (
+        <div className="image-modal" onClick={closeImageModal}>
+          <div className="image-modal-content">
+            <img src={selectedImage} alt="Cake preview" />
+          </div>
+        </div>
+      )}
     </>
   );
 }
