@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import SubscribeForm from "./components/SubscribeForm";
 import Header from "./components/Header";
@@ -17,7 +17,11 @@ import { products, customCakes } from "./data/products";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cakery-cart");
+
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
   const [popupMessage, setPopupMessage] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -25,6 +29,13 @@ function App() {
     selectedCategory === "all"
       ? products
       : products.filter((product) => product.category === selectedCategory);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "cakery-cart",
+      JSON.stringify(cart)
+    );
+  }, [cart]);
 
   function addToOrder(product) {
     setCart([...cart, product]);
